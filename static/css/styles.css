@@ -1,0 +1,19 @@
+.img {
+    background-color: #036f22;/* Change this to your desired color */
+    z-index: 1;
+  padding: 20px;
+  box-shadow: 5px 10px 8px #888888;
+}
+
+/* Add background color to the right column (form) */
+.form-col {
+    background-color: #F0F0F0; /* Change this to your desired color */
+    padding: 20px; /* Add some padding for spacing */
+    margin: 0; /* Remove any margin */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    display:flex;
+
+}

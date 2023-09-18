@@ -1,0 +1,51 @@
+{% load static %}
+{% load bootstrap5 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Register</title>
+</head>
+
+<body>
+    {% block content %}
+
+    <!-- Register -->
+    <!-- <div class="container py-5"> -->
+        <div class="row">
+            <!-- First Column for Image -->
+            <div class="col-md-6 first_col">
+                <!-- Add your image here -->
+                <img class="rounded-circle" alt="Your Image" src="{% static 'images/accounts.jpg' %}" width="300px">
+                <h1>Nami connecting you anywhere!</h1>
+                <p>Our kingdom wide coverage will serve our partners with highly available and sustainable connectivity solutions which will grant the stability and consistency for their businesses.</p>
+            </div>
+        <!-- Login -->
+        <div class="col-md-6 form-col">
+            <h1 class="text-center">Welcome back. Please, login to continue.</h1>
+            <form method="POST">
+                {% csrf_token %}
+
+                <!-- Username Field -->
+                <div class="form-group">
+                    <input type="number" class="form-control"  placeholder="ID Number" name="number">
+                </div>
+                
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Password" name="Password">
+                </div>
+
+                <button class="btn btn-primary btnstyle" type="submit">Login</button>
+            </form>
+            <p class="text-center">Don't have an account? <a href="/register">Sign Up</a>.</p>
+        </div>
+    </div>
+        {% endblock %}
+
+
+
+</body>
+</html>
